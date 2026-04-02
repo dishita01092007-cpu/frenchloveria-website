@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frenchloveria</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span onclick="closePopup()" class="close">&times;</span>
+        <img src="discount.jpg">
+        <h2>Limited Time Discount!</h2>
+    </div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor"></div>
+
+<!-- MOVING TEXT BAR -->
+<div class="marquee">
+    <div class="marquee-content">
+        Teaching French • Making French Fun & Easy • Fluent in English, French, Hindi • Bonjour à tous • Premium Classes • Student Friendly •
+    </div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <button onclick="toggleMode()">☀️ / 🌙</button>
+
+    <img src="logo.png" class="logo">
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#levels">Levels</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="slider-track">
+        <img src="img1.jpg">
+        <img src="img2.jpg">
+        <img src="img3.jpg">
+        <img src="img4.jpg">
+    </div>
+
+    <div class="hero-text">
+        <h1>Learn French Like Never Before</h1>
+        <p>Premium Learning Experience</p>
+
+        <a href="#contact" class="cta">Say Hello</a>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="card">
+    <h1>About Frenchloveria</h1>
+    <p>
+        Frenchloveria is a premium institute dedicated to mastering the French language 
+        with clarity, confidence, and real-world communication.
+    </p>
+</section>
+
+<!-- LEVELS -->
+<section id="levels" class="card">
+    <h1>Courses & Levels</h1>
+    <div class="levels-grid">
+        <div class="box">A1</div>
+        <div class="box">A2</div>
+        <div class="box">B1</div>
+        <div class="box">B2</div>
+        <div class="box">C1</div>
+        <div class="box">C2</div>
+    </div>
+    <p>CBSE | ICSE | RBSE | International | Grades 4–12</p>
+</section>
+
+<!-- FACULTY -->
+<section id="faculty" class="card">
+    <h1>Faculty</h1>
+
+    <div class="faculty-container">
+        <img src="faculty.jpg">
+
+        <div>
+            <h2>Dr. Shikha Agarwal</h2>
+            <p>
+                Dr. Shikha Agarwal is a distinguished faculty member at Frenchloveria, bringing 
+                over 15 years of teaching experience. She holds a Ph.D., MBA, and M.Com.
+            </p>
+            <p>
+                A B2-qualified French professional, she blends expertise with passion,
+                helping students learn confidently.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="card">
+    <h1>Contact Us</h1>
+
+    <div class="contact-links">
+        <a href="mailto:frenchloveria@gmail.com">Email</a>
+        <a href="https://whatsapp.com/channel/0029Vam35eT0LKZMT99Y0t2Y" target="_blank">WhatsApp</a>
+        <a href="https://youtube.com/@frenchlouvre?si=cCRQuRvYFZhFGAA-" target="_blank">YouTube</a>
+        <a href="https://www.facebook.com/share/1An4u92apL/?mibextid=wwXIfr" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/frenchloveria?igsh=MXAyc2w5cGhrOWJyNw==" target="_blank">Instagram</a>
+    </div>
+
+    <img src="contact.jpg" class="contact-img">
+</section>
+
+<footer>
+    <p>© Frenchloveria</p>
+</footer>
+
+<script>
+
+// POPUP
+window.onload = () => {
+    setTimeout(() => {
+        document.getElementById("popup").style.display = "flex";
+    }, 1500);
+};
+
+function closePopup() {
+    document.getElementById("popup").style.display = "none";
+}
+
+// DARK MODE
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+}
+
+// CURSOR
+const cursor = document.querySelector(".cursor");
+
+document.addEventListener("mousemove", (e) => {
+    cursor.style.top = e.clientY + "px";
+    cursor.style.left = e.clientX + "px";
+});
+
+</script>
+
+</body>
+</html>
